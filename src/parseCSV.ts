@@ -1,7 +1,7 @@
 export function parseCSV(input: string) {
   // use promise for error handling
   return new Promise((resolve, reject) => {
-    
+
     // split string into array by line
     const lines = input.split("\n");
     let parsedlines: string[][] = [];
@@ -34,6 +34,7 @@ export function parseCSV(input: string) {
           if (word.charAt(word.length - 1) === '"') {
             word = word.replace('"', "");
             endingWord = true;
+            // console.log(word);
           }
         }
 

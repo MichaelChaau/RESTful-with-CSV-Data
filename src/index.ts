@@ -31,8 +31,6 @@ app.get("/parse", (req: Request, res: Response, next: NextFunction) => {
   
   //GET request body 
   const { body } = req;
-  
-  //send error if body is undefined 
   if (typeof body === "undefined") {
     res.status(400).send("Error, body undefined");
     next();
@@ -49,6 +47,5 @@ app.get("/parse", (req: Request, res: Response, next: NextFunction) => {
     });
 });
 
+
 app.listen(10000);
-
-
